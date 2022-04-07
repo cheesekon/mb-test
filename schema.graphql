@@ -5,7 +5,7 @@ type Item @entity {
 
   contractAddress: String!
   tokenId: BigInt!
-  # sopoId: BigInt!
+  sopoId: BigInt!
 
   onSale: Boolean!
   price: Float!

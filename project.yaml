@@ -3,7 +3,7 @@ specVersion: "0.2.0"
 name: "Frontier EVM Starter Project"
 version: "1.0.0"
 description: "A basic Frontier EVM example project with an event and call handler. Read more about this at https://doc.subquery.network/create/frontier/"
-repository: "https://github.com/subquery/tutorials-frontier-evm-starter"
+repository: "https://github.com/cheesekon/mb-test"
 
 schema:
   file: "./schema.graphql"
@@ -32,7 +32,8 @@ dataSources:
     mapping:
       file: './dist/index.js'
       handlers:        
-        - handler: handleList
-          kind: substrate/FrontierEvmCall
+        - handler: handleListedEvent
+          kind: substrate/FrontierEvmEvent
           filter:
-            function: list(uint256,address)
+            topics: 
+              - Listed(address from, address to,uint256 sopo_id, uint256 nft_id, address nft_programe_address)
