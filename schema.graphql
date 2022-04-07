@@ -1,0 +1,13 @@
+type Item @entity {
+  id: ID! # Transaction hash
+
+  owner: String!
+
+  contractAddress: String!
+  tokenId: BigInt!
+  # sopoId: BigInt!
+
+  onSale: Boolean!
+  price: Float!
+
+}
