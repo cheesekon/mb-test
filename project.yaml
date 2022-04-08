@@ -10,7 +10,7 @@ schema:
 
 network:
   genesisHash: '0x91bc6e169807aaa54802737e1c504b2577d4fafedd5a02c10293b1cd60e39527'
-  endpoint: wss://wss.api.moonbase.moonbeam.network
+  endpoint: wss://moonbeam-alpha.api.onfinality.io/public-ws
   dictionary: https://api.subquery.network/sq/subquery/moonbeam-dictionary
   chaintypes:
     file: ./dist/chaintypes.js
@@ -33,7 +33,7 @@ dataSources:
           kind: substrate/FrontierEvmEvent
           filter:
             topics: 
-              - Listed(address from, address to,uint256 sopo_id, uint256 nft_id, address nft_programe_address)
+              - Listed(address from, address to, uint256 sopo_id, uint256 nft_id, address nft_programe_address)
 
         - handler: handleList
           kind: substrate/FrontierEvmCall
