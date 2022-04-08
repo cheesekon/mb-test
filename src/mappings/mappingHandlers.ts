@@ -1,4 +1,4 @@
-import { Item } from '../types'
+import { Order } from '../types'
 import { FrontierEvmCall, FrontierEvmEvent } from '@subql/contract-processors/dist/frontierEvm'
 
 import { BigNumber } from 'ethers'
@@ -14,7 +14,7 @@ type ListedEventArgs = [string, string, BigNumber, BigNumber, string] & {
 type ListCallArgs = [BigNumber, string] & { nft_id: BigNumber; nft_programe_address: string }
 
 export async function handleListedEvent(event: FrontierEvmEvent<ListedEventArgs>): Promise<void> {
-  const sopoItem = new Item(event.transactionHash)
+  const sopoItem = new Order(event.transactionHash)
 
   sopoItem.owner = event.args.from
   sopoItem.contractAddress = event.args.nft_programe_address
@@ -27,7 +27,7 @@ export async function handleListedEvent(event: FrontierEvmEvent<ListedEventArgs>
 }
 
 export async function handleList(event: FrontierEvmCall<ListCallArgs>): Promise<void> {
-  const sopoItem = new Item(event.hash)
+  const sopoItem = new Order(event.hash)
 
   sopoItem.owner = event.from
   sopoItem.contractAddress = event.args.nft_programe_address
