@@ -19,7 +19,7 @@ dataSources:
   - kind: substrate/FrontierEvm
     startBlock: 1953000
     processor:
-      file: './node_modules/@subql/contract-processors/dist/frontierEvm.js'
+      file: './node_modules/@subql/contract-processors/dist/moonbeam.js'
       options:
         abi: contract
         address: '0x7546601D838bebd9108894a557d533311090Dad8'
