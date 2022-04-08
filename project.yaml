@@ -25,7 +25,7 @@ dataSources:
         # Must be a key of assets
         abi: contract
         ## The contract that emitted the event
-        address: '0xba6f1D43256303B124f6e60411cDA4ce617DfBc5'
+        address: '0x7546601D838bebd9108894a557d533311090Dad8'
     assets:
       contract:
         file: './contract.abi.json'

@@ -479,7 +479,7 @@
         "name": "nft_status",
         "outputs": [
             {
-                "internalType": "enum Sopometa.Status",
+                "internalType": "enum flatsea.Status",
                 "name": "",
                 "type": "uint8"
             }
