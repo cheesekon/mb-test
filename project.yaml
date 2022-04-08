@@ -18,14 +18,14 @@ network:
 
 dataSources:
   - kind: substrate/FrontierEvm
-    startBlock: 752073
+    startBlock: 1953000
     processor:
       file: './node_modules/@subql/contract-processors/dist/frontierEvm.js'
       options:
         # Must be a key of assets
         abi: contract
         ## The contract that emitted the event
-        address: '0xba6f1D43256303B124f6e60411cDA4ce617DfBc5'
+        address: '0x5931351f118e8be5A112AFf93463f44B5411dB6f'
     assets:
       contract:
         file: './contract.abi.json'
