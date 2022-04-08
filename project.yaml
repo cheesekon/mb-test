@@ -37,3 +37,8 @@ dataSources:
           filter:
             topics: 
               - Listed(address from, address to,uint256 sopo_id, uint256 nft_id, address nft_programe_address)
+
+        - handler: handleList
+          kind: substrate/FrontierEvmCall
+          filter:
+            function: list(uint256,address)

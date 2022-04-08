@@ -1,4 +1,4 @@
-type Item @entity {
+type Order @entity {
   id: ID! # Transaction hash
 
   owner: String!
